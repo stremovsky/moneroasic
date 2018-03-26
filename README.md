@@ -25,5 +25,6 @@ most memory intensive code on the AISC level. And to leave other steps to CPU to
 able to make changes if required in the future.
 
 # Simulation results
+It takes 2.7 million ticks to perform hashing of one buffer using cryptonight algorithm.
 ![alt simulation results](https://raw.githubusercontent.com/stremovsky/moneroasic/master/simulation.png)
 
