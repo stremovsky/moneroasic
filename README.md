@@ -24,4 +24,6 @@ The code bellow implements steps: 3, 4, 5, 6. It was done to implement only the
 most memory intensive code on the AISC level. And to leave other steps to CPU to be
 able to make changes if required in the future.
 
+# Simulation results
+![alt simulation results](https://raw.githubusercontent.com/stremovsky/moneroasic/master/simulation.png)
 
