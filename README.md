@@ -15,14 +15,14 @@ In a nutshell original Monero / Cryptonight algo works as following:
 2. Hash these bytes using Keccak hashing algo and generate new 200 bytes.
 3. Generate AES keys using some of the 200 bytes.
 4. Generate 2 Megabyte buffer out of hashed bytes.
-5. Shuffle and scumble this 2 Megabyte buffer.
+5. Shuffle and scramble this 2 Megabyte buffer.
 6. Generate small 128 bytes buffer out of this 2 Megabytes.
 7. Hash the small buffer using one of the SHA3 candidates: groestl or jk or skein etc...
-8. Check if final hash has required leading number of zeros and send it to the network.
+8. Check if final hash has required leading number of zeros and if yes, send it to the network.
 
-The code bellow implements steps: 3, 4, 5, 6. It was done to implement only the
-most memory intensive code on the AISC level. And to leave other steps to CPU to be
-able to make changes if required in the future.
+The Verilog code bellow implements steps: 3, 4, 5, 6. Only memory intensive code was
+intended to be implemented by special AISC chip. Other steps were intentially left for CPU.
+To be able to make changes if required in the future (in steps 1, 2, 7, 8).
 
 # Simulation results
 It takes min 2.7 million ticks to perform hashing of one buffer using cryptonight algorithm.
